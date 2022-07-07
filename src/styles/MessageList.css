@@ -1,0 +1,31 @@
+.MessageList {
+    width: 100%;
+    padding: 48px 24px;
+    border: 5px solid black;
+}
+
+.MessageList h1 {
+    margin-bottom: 14px;
+}
+
+.Message {
+    margin-top: 12px;
+    width: 100%;
+    border-bottom: 1px solid #ccc;
+}
+
+.Message-info {
+    display: flex;
+    gap: 10px;
+}
+
+.Message-from {
+    text-transform: capitalize;
+    font-weight: bold;
+    font-size: 14px;
+}
+
+.Message-text {
+    font-size: 14px;
+    padding: 12px;
+}
