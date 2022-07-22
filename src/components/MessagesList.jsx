@@ -8,7 +8,7 @@ import "../styles/MessageList.css";
 const Message = ({ message, position }) => {
   const date = new Date(message.timeStamp);
   const distance = getDistance(position.lat, position.lng, message.location.lat, message.location.lng);
-  console.log(position);
+  // console.log(position);
   return (
     <div className="Message">
       <div className="Message-info">

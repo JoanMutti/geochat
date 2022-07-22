@@ -25,6 +25,7 @@ const MessageSender = ({ position }) => {
       text: messageText,
       location: position,
       timeStamp: new Date().getTime(),
+      notification: false,
     };
     sendMessage(message);
   };
