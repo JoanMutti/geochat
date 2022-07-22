@@ -10,7 +10,7 @@ const Messages = () => {
   const { user } = useContext(UserContext);
   const [isTokenFound, setIsTokenFound] = useState(false);
 
-  getTokener(setIsTokenFound);
+  // getTokener(setIsTokenFound);
 
   onMessageListener()
     .then((payload) => {
@@ -34,10 +34,17 @@ const Messages = () => {
     };
   }, [user]);
 
+  const handleSeeToken = () => {
+    getTokener(setIsTokenFound);
+  };
+
   return (
     <div>
       {isTokenFound ? <p>Notificaciones activadas</p> : <p>Notificaciones desactivadas</p>}
-      <p>{isTokenFound}</p>
+      {isTokenFound && <p>{isTokenFound}</p>}
+      <button type="button" onClick={handleSeeToken}>
+        Activar notificaciones
+      </button>
       <MessagesList messages={messages} />
     </div>
   );
