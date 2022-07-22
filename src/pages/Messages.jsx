@@ -35,7 +35,11 @@ const Messages = () => {
   }, [user]);
 
   const handleSeeToken = () => {
-    getTokener(setIsTokenFound);
+    try {
+      getTokener(setIsTokenFound);
+    } catch (error) {
+      alert(error);
+    }
   };
 
   return (
