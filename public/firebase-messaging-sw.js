@@ -18,14 +18,14 @@ firebase.initializeApp(firebaseConfig);
 // Retrieve firebase messaging
 const messaging = firebase.messaging();
 
-messaging.onBackgroundMessage(function (payload) {
-  console.log("Received background message ", payload);
+// messaging.onBackgroundMessage(function (payload) {
+//   console.log("Received background message ", payload);
 
-  const notificationTitle = payload.notification.title;
-  const notificationOptions = {
-    body: payload.notification.body,
-  };
+//   const notificationTitle = payload.notification.title;
+//   const notificationOptions = {
+//     body: payload.notification.body,
+//   };
 
-  // eslint-disable-next-line no-restricted-globals
-  self.registration.showNotification(notificationTitle, notificationOptions);
-});
+//   // eslint-disable-next-line no-restricted-globals
+//   self.registration.showNotification(notificationTitle, notificationOptions);
+// });
